@@ -1,4 +1,17 @@
+//Agregar autenticación por cooki//
+
+using Microsoft.AspNetCore.Authentication.Cookies;
+
+using System.Text.Json;
 var builder = WebApplication.CreateBuilder(args);
+
+// Agrega servicios al contenedor de dependencias.
+// Agrega el servicio de controladores al contenedor
+builder.Services.AddControllers();
+// Agrega el servicio para la exploración de API de puntos finales
+builder.Services.AddEndpointsApiExplorer();
+// Agrega el servicio para la generación de Swagger
+builder.Services.AddSwaggerGen();
 
 // Add services to the container.
 
